@@ -1,10 +1,9 @@
 import $ from 'jquery'
 import router from './router'
 import homeTpl from './templates/home.hbs'
-<<<<<<< HEAD
-=======
-import playerTpl from './templates/player.hbs'
->>>>>>> upstream/master
+
+import magnusTpl from './templates/magnus.hbs'
+import sergeyTpl from './templates/sergey.hbs'
 import contactTpl from './templates/contact.hbs'
 import notFoundTpl from './templates/not-found.hbs'
 import playerTpl from './templates/player.hbs'
@@ -21,19 +20,6 @@ const players = {
     image: 'https://cdn.worldchess.com/static/img/nyfide/karjakin_2x.png',
     description: 'On March 28, 2016, Sergey Karjakin became the Challenger to Magnus Carlsen in the World Chess Championship 2016 after winning the Candidates Tournament 2016 in Moscow. Karjakin won the 2012 World Rapid Chess Championship and the Chess World Cup 2015. ' +
     'He also won the Norway Chess Tournament twice (2013, 2014) and the Corus Chess Tournament in 2009.'
-  }
-}
-
-const data = {
-  'magnus': {
-    name: 'Magnus Carlsen',
-    image: 'https://cdn.worldchess.com/static/img/nyfide/carlsen_2x.png',
-    description: 'Carlsen is a former chess prodigy. He became a Grandmaster in 2004, at the age of 13 years, 148 days. This made him the third-youngest grandmaster in history.'
-  },
-  'sergey': {
-    name: 'Sergey Karjakin',
-    image: 'https://cdn.worldchess.com/static/img/nyfide/karjakin_2x.png',
-    description: 'On March 28, 2016, Sergey Karjakin became the Challenger to Magnus Carlsen in the World Chess Championship 2016 after winning the Candidates Tournament 2016 in Moscow.'
   }
 }
 
@@ -60,6 +46,7 @@ function allPlayers(ctx) {
     let description = player.description;
     $app.html(playerTpl({name, image, description}));
   }
+
 }
 
 function notFound() {
