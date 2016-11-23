@@ -6,4 +6,7 @@ export function es5(x) {
 }
 
 export function es6(x) {
+  return function tpl({x}={}) {
+    return 'My value is more than ${x}.';
+  }
 }
