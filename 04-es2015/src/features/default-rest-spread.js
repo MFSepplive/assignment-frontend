@@ -36,4 +36,22 @@ export function es5() {
 }
 
 export function es6() {
+  function defaults(x=12) {
+    return x;
+  }
+  function rest(...args) {
+    return args.join(',');
+  }
+  function spread(arr) {
+    function realSpread(x, y, z=0)
+    {
+      return x+y+z;
+    }
+    return realSpread(...arr);
+  }
+  return{
+    defaults: defaults,
+    rest: rest,
+    spread: spread
+  }
 }

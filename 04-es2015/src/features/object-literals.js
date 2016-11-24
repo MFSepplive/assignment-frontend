@@ -21,4 +21,7 @@ export function es6() {
   }
 
   return o;
+
+
+  //return {i:0, next: () => this.i += 1 };
 }
