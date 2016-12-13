@@ -18,11 +18,10 @@ export function es5(n) {
 export function es6(n) {
 
   function* counter(n) {
-    let index = 0;
-    while (index < n) {
-      yield index+=1;
+    let cnt = 0
+    while(cnt++ < n) {
+      yield cnt
     }
   }
-
-  return counter(n);
+  return counter(n)
 }
