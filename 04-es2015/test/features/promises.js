@@ -19,5 +19,4 @@ export default function() {
     p.then(function (val) {
       val.should.eql(10)
     })
-  })
 }
